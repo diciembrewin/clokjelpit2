@@ -1,121 +1,809 @@
-<!doctype html>
-<html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Procesando…</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Conoce servicios de Jelpit relacionados con aseo y administración, limpieza de casas, limpieza de condominios y administración de conjuntos residenciales. Información y orientación sobre estos servicios.">
-       
-           
-        <style>
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-            html,
-            body {
-                height: 100%;
-                font-family:
-                    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-                    sans-serif;
-                background: #fff;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            .container {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 12px;
-            }
-            .brand img {
-                height: 48px;
-                width: auto;
-            }
-            .progress-track {
-                width: 220px;
-                height: 3px;
-                background: #e5e7eb;
-                border-radius: 99px;
-                overflow: hidden;
-                margin-top: 28px;
-            }
-            .progress-fill {
-                height: 100%;
-                width: 0%;
-                background: linear-gradient(90deg, #4ade80, #22c55e);
-                border-radius: 99px;
-                animation: barload 3.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-            }
-            @keyframes barload {
-                0% {
-                    width: 0%;
-                }
-                20% {
-                    width: 35%;
-                }
-                50% {
-                    width: 65%;
-                }
-                80% {
-                    width: 85%;
-                }
-                100% {
-                    width: 97%;
-                }
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container" id="loader">
-            <div class="brand">
-                <svg width="131px" height="59px" viewBox="0 0 131 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <defs>
-                        <linearGradient x1="35.0769911%" y1="51.4908483%" x2="71.8921152%" y2="44.1643642%" id="linearGradient-1">
-                            <stop stop-color="#CFFF5B" offset="0%"></stop>
-                            <stop stop-color="#83E578" offset="100%"></stop>
-                        </linearGradient>
-                        <linearGradient x1="9.15126297%" y1="51.8931667%" x2="100.758856%" y2="47.6479194%" id="linearGradient-2">
-                            <stop stop-color="#CFFF5B" offset="0%"></stop>
-                            <stop stop-color="#A5E37D" offset="100%"></stop>
-                        </linearGradient>
-                    </defs>
-                    <g id="Símbolos" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                        <g id="desktop-components-/-atoms-/-navigation-/-private-nav" transform="translate(-360.000000, -10.000000)">
-                            <g id="atoms-/-brand-/-logo-header-invert-mob" transform="translate(360.000000, 10.000000)">
-                                <g id="Group" transform="translate(0.000021, 0.139395)">
-                                    <g id="Group-14" transform="translate(41.111681, 12.199256)" fill="#00E871">
-                                        <path d="M7.75087979,27.4901581 C5.6413617,27.4901581 3.81934681,26.7305302 2.33556277,25.2323442 C0.841047872,23.7363907 0.0827808511,21.9123907 0.0827808511,19.8128093 C0.0827808511,19.2573209 0.278305319,18.7798326 0.663919149,18.3937395 C1.06123936,17.995786 1.54384894,17.7941581 2.09878723,17.7941581 C2.64160106,17.7941581 3.11849681,17.995786 3.51595638,18.3936 C3.90170957,18.7798326 4.0973734,19.2573209 4.0973734,19.8128093 C4.0973734,20.8272279 4.44856489,21.6721116 5.17129468,22.3953209 C5.89374574,23.1190884 6.73758085,23.4708558 7.75087979,23.4708558 C8.7639,23.4708558 9.60759574,23.1190884 10.3304649,22.3953209 C11.0412096,21.6838326 11.3866872,20.8448093 11.3866872,19.8302512 L11.3866872,2.07764651 C11.3866872,1.51950698 11.5897372,1.04048372 11.9901234,0.653972093 C12.3672362,0.262297674 12.8455255,0.0589953488 13.4026936,0.0589953488 C13.9600011,0.0589953488 14.4382904,0.262297674 14.8246011,0.663181395 C15.2157894,1.04062326 15.4188394,1.51964651 15.4188394,2.07764651 L15.4188394,19.8302512 C15.4188394,21.9306698 14.6601543,23.7489488 13.163967,25.2345767 C11.6693128,26.7309488 9.84785532,27.4901581 7.75087979,27.4901581" id="Fill-1"></path>
-                                        <path d="M21.8616563,15.2026465 L33.8728233,15.2026465 C33.4809382,14.0292977 32.7816212,13.0376233 31.7896446,12.250786 C30.6415829,11.3558093 29.3240573,10.9010651 27.8760893,10.9010651 C26.4159967,10.9010651 25.092618,11.3558093 23.9426052,12.2524605 C22.9524403,13.0377628 22.2535414,14.0290186 21.8616563,15.2026465 M27.8760893,27.4902279 C25.0319956,27.4902279 22.5651541,26.4763674 20.5442701,24.4769721 L20.5428765,24.4754372 C19.5985616,23.5300884 18.8560424,22.436414 18.3358052,21.2245535 C17.7906222,19.9507395 17.514268,18.6039488 17.514268,17.2211581 C17.514268,14.384414 18.5331414,11.9258093 20.5428765,9.91399535 C21.4998733,8.96753023 22.6103073,8.22436744 23.8446339,7.70334419 C25.1147765,7.15846047 26.4718807,6.88162326 27.8760893,6.88162326 C30.7081978,6.88162326 33.1694648,7.90162326 35.1910456,9.91315814 C36.1360573,10.8594837 36.8788552,11.9658558 37.3997893,13.202414 C37.9438573,14.4735767 38.2202116,15.8263674 38.2202116,17.2211581 C38.2202116,17.7766465 38.0248265,18.2541349 37.6392127,18.6400884 C37.2420318,19.0377628 36.7592829,19.2396698 36.2043446,19.2396698 L21.8644435,19.2396698 C22.2574435,20.3890186 22.9606627,21.3618558 23.9591893,22.1361349 C25.0981924,23.0219023 26.415718,23.4709256 27.8760893,23.4709256 C30.198552,23.4709256 32.0095573,22.7581814 33.2585169,21.3529256 C33.6131924,20.9407395 34.0779637,20.7148326 34.6362467,20.6858093 C35.1882584,20.6579023 35.6760244,20.8233907 36.0876988,21.178507 C36.5059233,21.5539953 36.7298776,22.0238093 36.7584467,22.5794372 C36.7870159,23.122507 36.6139286,23.6073907 36.244202,24.020414 C34.211751,26.3220419 31.395669,27.4902279 27.8760893,27.4902279" id="Fill-3"></path>
-                                        <path d="M42.507744,27.4901581 C41.9553143,27.4901581 41.4740983,27.295786 41.0774749,26.9127628 C40.6874015,26.5222047 40.491877,26.0448558 40.491877,25.4892279 L40.491877,2.16583256 C40.491877,1.61006512 40.6874015,1.13271628 41.072876,0.746762791 C41.4701962,0.348809302 41.9529451,0.147181395 42.507744,0.147181395 C43.0505579,0.147181395 43.5274536,0.348809302 43.9249132,0.746623256 C44.3106664,1.13285581 44.5061909,1.61034419 44.5061909,2.16583256 L44.5061909,25.4892279 C44.5061909,26.0447163 44.3106664,26.5220651 43.9249132,26.9081581 C43.5235515,27.295786 43.0481887,27.4901581 42.507744,27.4901581" id="Fill-5"></path>
-                                        <path d="M58.1431376,10.9010512 C56.444179,10.9010512 55.030912,11.4999349 53.8227854,12.7320279 C52.6299886,13.9595163 52.0247407,15.4584 52.0247407,17.1858419 C52.0247407,18.9017023 52.6299886,20.3947256 53.8240397,21.6234698 C55.030912,22.854307 56.4440397,23.4531907 58.1431376,23.4531907 C59.8422354,23.4531907 61.2555024,22.854307 62.4634897,21.622214 C63.6444407,20.3955628 64.2442535,18.9022605 64.2442535,17.1858419 C64.2442535,15.4579814 63.6444407,13.9586791 62.4612599,12.7296558 C61.2553631,11.4999349 59.8420961,10.9010512 58.1431376,10.9010512 M50.0261546,34.2068651 C49.4737248,34.2068651 48.9925088,34.0127721 48.5960248,33.6296093 C48.2056727,33.2389116 48.0101482,32.7614233 48.0101482,32.2060744 L48.0101482,8.88253953 C48.0101482,8.3271907 48.2056727,7.84970233 48.5914259,7.46346977 C48.9884673,7.06579535 49.4712163,6.86388837 50.0261546,6.86388837 C50.5691078,6.86388837 51.0458641,7.06565581 51.4434631,7.46346977 C51.8290769,7.84970233 52.0247407,8.3271907 52.0247407,8.88253953 L52.0247407,8.95509767 C53.8053652,7.56686512 55.8599748,6.86388837 58.1431376,6.86388837 C60.9188046,6.86388837 63.3276716,7.88500465 65.3027056,9.89863256 C67.2640822,11.898586 68.2585673,14.350493 68.2585673,17.1858419 C68.2585673,20.0096093 67.2640822,22.4555163 65.3027056,24.4554698 C63.3272535,26.4576558 60.9186652,27.472493 58.1431376,27.472493 C55.8596961,27.472493 53.8050865,26.7696558 52.0247407,25.3814233 L52.0247407,32.2060744 C52.0247407,32.7614233 51.8290769,33.2389116 51.4434631,33.6250047 C51.041962,34.0127721 50.5665993,34.2068651 50.0261546,34.2068651" id="Fill-7"></path>
-                                        <path d="M73.2678959,5.13623721 C72.842982,5.13623721 72.4310288,5.02572558 72.0436033,4.80777209 C71.6519969,4.58800465 71.3417778,4.27753953 71.1220044,3.88502791 C70.9044607,3.49712093 70.7942256,3.08465581 70.7942256,2.65935349 C70.7942256,2.23530698 70.9040427,1.8206093 71.1206107,1.42712093 C71.3419171,1.02567907 71.6575714,0.713260465 72.0590724,0.498516279 C72.8432607,0.078655814 73.697548,0.0792139535 74.4703086,0.499632558 C74.863448,0.713818605 75.1774299,1.02442326 75.4038927,1.42293488 C75.6279863,1.81767907 75.7415661,2.23363256 75.7415661,2.65935349 C75.7415661,3.08451628 75.631331,3.4969814 75.4137873,3.88502791 C75.1935959,4.27767907 74.8835161,4.58814419 74.492049,4.80805116 C74.1046235,5.02572558 73.6928097,5.13623721 73.2678959,5.13623721" id="Path"></path>
-                                        <path d="M73.2678959,27.4901442 C72.7130969,27.4901442 72.2362012,27.2943767 71.8505873,26.9081442 C71.4549395,26.5263767 71.2518895,26.0473535 71.2518895,25.489214 L71.2518895,8.9001907 C71.2518895,8.34205116 71.4549395,7.86302791 71.855465,7.47651628 C72.232299,7.0849814 72.7105884,6.88167907 73.2678959,6.88167907 C73.8252033,6.88167907 74.3034927,7.0849814 74.6896639,7.48586512 C75.0808522,7.86316744 75.2839022,8.3421907 75.2839022,8.9001907 L75.2839022,25.489214 C75.2839022,26.0470744 75.0808522,26.5260977 74.6804661,26.9127488 C74.2994512,27.2943767 73.8226948,27.4901442 73.2678959,27.4901442" id="Path"></path>
-                                        <path d="M83.1808749,27.4901581 C82.626076,27.4901581 82.1491802,27.2943907 81.7635664,26.9081581 C81.3679185,26.5263907 81.1647291,26.0472279 81.1647291,25.4892279 L81.1647291,10.9184372 L78.9727089,10.9184372 C78.4173526,10.9184372 77.9344643,10.7168093 77.5377015,10.3188558 C77.152227,9.93304186 76.9567026,9.45569302 76.9567026,8.90006512 C76.9567026,8.34471628 77.152227,7.86722791 77.5378409,7.48127442 C77.9348823,7.08332093 78.4176313,6.88169302 78.9727089,6.88169302 L81.1647291,6.88169302 L81.1647291,2.16583256 C81.1647291,1.60769302 81.3679185,1.12866977 81.7683047,0.74215814 C82.1452781,0.350483721 82.6235674,0.147181395 83.1808749,0.147181395 C83.738043,0.147181395 84.2164717,0.350483721 84.602643,0.751227907 C84.9836579,1.13285581 85.1791823,1.61034419 85.1791823,2.16583256 L85.1791823,6.88169302 L87.3889015,6.88169302 C87.9462089,6.88169302 88.4244983,7.08485581 88.8108089,7.48573953 C89.1918238,7.86722791 89.3874877,8.34471628 89.3874877,8.90006512 C89.3874877,9.45569302 89.1918238,9.93304186 88.80621,10.3189953 C88.4249164,10.7152744 87.9464877,10.9184372 87.3889015,10.9184372 L85.1791823,10.9184372 L85.1791823,25.4892279 C85.1791823,26.0447163 84.9836579,26.5222047 84.598044,26.9081581 C84.2124302,27.2943907 83.7356738,27.4901581 83.1808749,27.4901581" id="Fill-11"></path>
-                                    </g>
-                                    <path d="M9.7473546,10.2909767 C8.80847481,10.7150233 8.021778,11.6116744 7.79517588,12.6269302 L7.79517588,12.6269302 C7.56508971,13.6582326 7.76047481,14.7679535 8.32739822,15.662093 L8.32739822,15.662093 C9.35714183,17.2858605 11.1848706,18.1187442 12.8337982,18.9627907 L12.8337982,18.9627907 C15.9641408,20.5647907 19.1473014,22.1150233 22.0288833,24.147907 L22.0288833,24.147907 C22.2149312,24.2793488 22.3993067,24.4130233 22.582428,24.5486512 L22.582428,24.5486512 C22.583961,26.2596279 22.4755376,27.9690698 22.2574365,29.6683256 L22.2574365,29.6683256 C21.7741301,33.1018605 20.8703695,36.4465116 19.8237631,39.7469302 L19.8237631,39.7469302 C19.5717972,39.7663256 19.3199706,39.7862791 19.0682833,39.8065116 L19.0682833,39.8065116 C17.4430472,39.9390698 15.8218525,40.0943721 14.2063716,40.3174884 L14.2063716,40.3174884 C11.3529408,40.7116744 8.50856843,41.4147907 5.95225673,42.7805581 L5.95225673,42.7805581 C3.45294396,44.1160465 1.29980566,46.2104651 0.380854599,48.9417209 L0.380854599,48.9417209 C-0.055208167,50.2384186 -0.128651784,51.7006047 0.221982259,53.0263256 L0.221982259,53.0263256 C0.551293961,54.2709767 1.27750779,55.4257674 2.19464715,56.3203256 L2.19464715,56.3203256 C3.16209609,57.2638605 4.36534502,57.9686512 5.66029396,58.351814 L5.66029396,58.351814 C7.15662056,58.7945581 8.76039502,58.7416744 10.2613206,58.3513953 L10.2613206,58.3513953 C12.7239812,57.7107907 14.9752301,56.2346512 16.6419961,54.3230233 L16.6419961,54.3230233 C18.2488365,52.4797674 19.367911,50.3451628 20.2931333,48.096 L20.2931333,48.096 C20.7346312,47.0222791 21.1103503,45.9246977 21.4852333,44.8265581 L21.4852333,44.8265581 C21.7220089,44.1327907 21.9575301,43.4387442 22.1891493,42.7434419 L22.1891493,42.7434419 C23.3641078,42.6411628 24.5387876,42.4982791 25.6677567,42.1954884 L25.6677567,42.1954884 C27.3763312,41.7369767 28.8980216,40.8075349 29.9833706,39.4011628 L29.9833706,39.4011628 C30.5027716,38.7280465 30.878212,38.025907 31.1940057,37.2355814 L31.1940057,37.2355814 C31.4819269,36.5147442 31.6187801,35.768093 31.7128493,35.0002326 L31.7128493,35.0002326 C31.893462,33.5267442 31.6643514,31.9629767 31.1892674,30.5634419 L31.1892674,30.5634419 C30.6835237,29.0733488 29.9277652,27.6802326 28.9757854,26.4298605 L28.9757854,26.4298605 C28.0172557,25.1711163 26.946261,24.0280465 25.7353472,23.0122326 L25.7353472,23.0122326 C25.7202961,22.6523721 25.7006461,22.2929302 25.6763972,21.9337674 L25.6763972,21.9337674 C25.6697078,21.8327442 25.6566078,21.7339535 25.6375152,21.6372558 L25.6375152,21.6372558 C25.5538982,21.0019535 25.4704206,20.3663721 25.3868035,19.7309302 L25.3868035,19.7309302 C25.2524589,18.7077209 25.1312142,17.690093 24.7649716,16.7179535 L24.7649716,16.7179535 C24.2696801,15.4029767 23.541794,14.2081395 22.535045,13.2196744 L22.535045,13.2196744 C21.609962,12.3115814 20.5003642,11.5866977 19.3127237,11.0740465 L19.3127237,11.0740465 C18.6110376,10.7712558 17.9015472,10.5057209 17.1619546,10.3110698 L17.1619546,10.3110698 C16.3897514,10.107907 15.6055631,9.98246512 14.8148248,9.87809302 L14.8148248,9.87809302 C14.1244269,9.78697674 13.4212078,9.71916279 12.7227269,9.71916279 L12.7227269,9.71916279 C11.7034354,9.71916279 10.6938993,9.8635814 9.7473546,10.2909767 M21.260861,19.8613953 C19.828362,19.0022791 18.3521035,18.2190698 16.8676227,17.4544186 L16.8676227,17.4544186 C15.3972174,16.6970233 13.8833312,15.9975349 12.4541769,15.1636744 L12.4541769,15.1636744 C12.191062,15.0100465 11.9346365,14.846093 11.6875482,14.6684651 L11.6875482,14.6684651 C11.4808748,14.4964186 11.2874408,14.3116744 11.1110089,14.1087907 L11.1110089,14.1087907 C11.051362,14.0182326 10.9965929,13.9247442 10.9467014,13.8283256 L10.9467014,13.8283256 C10.9195259,13.7462791 10.8961131,13.6632558 10.8766025,13.5791163 L10.8766025,13.5791163 C10.8747401,13.5288837 10.8742333,13.4785116 10.8753482,13.4281395 L10.8753482,13.4281395 C10.882595,13.3992558 10.8927684,13.3705116 10.9012695,13.3417674 L10.9012695,13.3417674 C10.9085163,13.3292093 10.9175748,13.3172093 10.9252397,13.3046512 L10.9252397,13.3046512 C10.9506035,13.2784186 10.9780578,13.2535814 11.0049546,13.2284651 L11.0049546,13.2284651 C11.0726844,13.1857674 11.1419472,13.1457209 11.2130216,13.1090233 L11.2130216,13.1090233 C11.429311,13.0336744 11.6510354,12.9785581 11.8765227,12.937814 L11.8765227,12.937814 C12.7582642,12.8500465 13.6621642,12.9188372 14.5415365,13.027814 L14.5415365,13.027814 C15.6834663,13.1930233 16.8086727,13.4690233 17.8796674,13.9003256 L17.8796674,13.9003256 C18.5104184,14.1842791 19.1134365,14.5247442 19.6732525,14.9313488 L19.6732525,14.9313488 C20.1101514,15.2847907 20.5101195,15.6791163 20.8664674,16.1136279 L20.8664674,16.1136279 C21.1844908,16.5513488 21.4556886,17.0189302 21.6775525,17.5127442 L21.6775525,17.5127442 C21.9160003,18.138 22.0764057,18.7882326 22.1700567,19.4514419 L22.1700567,19.4514419 C22.2159067,19.8051628 22.2627323,20.1587442 22.3094184,20.5123256 L22.3094184,20.5123256 C21.963244,20.2900465 21.6138642,20.0729302 21.260861,19.8613953 M24.9756865,32.6398605 C25.3049982,30.9016744 25.5426099,29.144093 25.6677567,27.3788372 L25.6677567,27.3788372 C25.8865546,27.6256744 26.0983844,27.8789302 26.3036642,28.138186 L26.3036642,28.138186 C26.9388748,28.9889302 27.4913046,29.8985581 27.9217929,30.8701395 L27.9217929,30.8701395 C28.2048365,31.5859535 28.4155514,32.3264651 28.5360993,33.0872093 L28.5360993,33.0872093 C28.5975578,33.6651628 28.6063376,34.2474419 28.5508716,34.8259535 L28.5508716,34.8259535 C28.4683695,35.3387442 28.3341642,35.839814 28.1478376,36.3246977 L28.1478376,36.3246977 C27.9644376,36.7213953 27.7459184,37.0988372 27.4906078,37.4535349 L27.4906078,37.4535349 C27.2488152,37.7430698 26.9834706,38.0094419 26.6944344,38.2513953 L26.6944344,38.2513953 C26.3693035,38.4835814 26.0249408,38.6825581 25.6623216,38.8504186 L25.6623216,38.8504186 C24.9128344,39.1364651 24.1275312,39.303907 23.3347025,39.4204186 L23.3347025,39.4204186 C23.3071089,39.4237674 23.2793759,39.4273953 23.2515035,39.4308837 L23.2515035,39.4308837 C23.9342365,37.1962326 24.5407386,34.9366047 24.9756865,32.6398605 M7.24274609,55.4489302 C6.81908651,55.3744186 6.40587907,55.2595814 6.00409928,55.106093 L6.00409928,55.106093 C5.60176205,54.9193953 5.21963226,54.6958605 4.85952162,54.4364651 L4.85952162,54.4364651 C4.53745673,54.1692558 4.24145247,53.8748372 3.97429609,53.5526512 L3.97429609,53.5526512 C3.76929502,53.2649302 3.58993651,52.9614419 3.43942588,52.6417674 L3.43942588,52.6417674 C3.33797056,52.365907 3.26062481,52.083907 3.20766736,51.7949302 L3.20766736,51.7949302 C3.17631098,51.4487442 3.17714715,51.1022791 3.20836417,50.7559535 L3.20836417,50.7559535 C3.28264396,50.326186 3.4004046,49.9071628 3.55648971,49.5 L3.55648971,49.5 C3.78838758,48.9953023 4.07254609,48.5196279 4.39934928,48.0711628 L4.39934928,48.0711628 C4.851578,47.5134419 5.36303545,47.0097209 5.92299077,46.5605581 L5.92299077,46.5605581 C6.78257375,45.9280465 7.71810885,45.4110698 8.69475566,44.9825581 L8.69475566,44.9825581 C10.6989163,44.1666977 12.8226493,43.7034419 14.9603184,43.4014884 L14.9603184,43.4014884 C16.2184759,43.238093 17.4816503,43.1222791 18.7458003,43.0176279 L18.7458003,43.0176279 C18.6180057,43.3946512 18.4897929,43.7715349 18.3613014,44.1478605 L18.3613014,44.1478605 C17.9960344,45.2165581 17.6235206,46.2814884 17.1927535,47.3254884 L17.1927535,47.3254884 C16.5426312,48.8338605 15.7677801,50.2921395 14.7788695,51.6061395 L14.7788695,51.6061395 C14.1858854,52.3452558 13.5232206,53.0239535 12.7850216,53.6182326 L12.7850216,53.6182326 C12.1128801,54.116093 11.3908472,54.537907 10.627145,54.8782326 L10.627145,54.8782326 C9.99527907,55.1291163 9.34418119,55.3230698 8.67399077,55.437907 L8.67399077,55.437907 C8.41463864,55.465814 8.15500779,55.4804651 7.89537694,55.4804651 L7.89537694,55.4804651 C7.67783332,55.4804651 7.46028971,55.4701395 7.24274609,55.4489302" id="Fill-15" fill="url(#linearGradient-1)"></path>
-                                    <path d="M15.1413493,1.95399252e-14 C13.0397748,1.95399252e-14 11.3362174,1.70581395 11.3362174,3.80986047 L11.3362174,3.80986047 C11.3362174,5.91404651 13.0397748,7.61986047 15.1413493,7.61986047 L15.1413493,7.61986047 C17.2429237,7.61986047 18.9463418,5.91404651 18.9463418,3.80986047 L18.9463418,3.80986047 C18.9463418,1.70581395 17.2429237,1.95399252e-14 15.1413493,1.95399252e-14 Z" id="Fill-18" fill="url(#linearGradient-2)"></path>
-                                </g>
-                            </g>
-                        </g>
-                    </g>
-                </svg>
-            </div>
 
-       
-            <div class="progress-track">
-                <div class="progress-fill"></div>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Guía gratuita y educativa sobre mantenimiento, limpieza, remodelación y cuidado del hogar en Colombia. Proyecto informativo sin fines de lucro.">
+    <meta name="theme-color" content="#0f766e">
+    <title>adminhouses• Guía Gratuita de Cuidado del Hogar</title>
+
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root{
+            --primary:#0f766e;
+            --primary-dark:#115e59;
+            --primary-soft:#ccfbf1;
+            --primary-verysoft:#f0fdfa;
+            --accent:#2dd4bf;
+            --hero-start:#134e4a;
+            --hero-end:#022c22;
+            --border:#e2e8f0;
+            --bg:#f8fafc;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; }
+        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: #1e293b;
+            line-height: 1.55;
+        }
+        a { color: var(--primary); text-decoration: none; }
+        a:hover { color: var(--primary-dark); text-decoration: underline; }
+        button { font-family: inherit; cursor: pointer; }
+        img { max-width: 100%; }
+
+        .wrap { width: 100%; max-width: 1152px; margin: 0 auto; padding: 0 1.25rem; }
+
+        /* NAV */
+        .nav {
+            background: #fff;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-weight: 700;
+            font-size: 1.35rem;
+            color: #0f172a;
+        }
+        .logo-icon {
+            width: 36px; height: 36px;
+            background: var(--primary);
+            border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            color: #fff;
+        }
+        .logo span { color: var(--primary); }
+        .nav-links { display: none; gap: 1.75rem; font-size: 0.875rem; font-weight: 500; }
+        .nav-links a { color: #475569; }
+        .nav-links a:hover { color: var(--primary); text-decoration: none; }
+        .nav-actions { display: none; gap: 0.35rem; }
+        .btn-ghost {
+            background: none; border: none;
+            padding: 0.45rem 0.9rem;
+            font-size: 0.875rem; color: #475569;
+            border-radius: 10px;
+        }
+        .btn-ghost:hover { color: var(--primary); }
+        .menu-btn {
+            display: flex; width: 42px; height: 42px;
+            align-items: center; justify-content: center;
+            background: none; border: none; color: #475569; font-size: 1.15rem;
+        }
+        .mobile-menu {
+            display: none;
+            border-top: 1px solid var(--border);
+            background: #fff;
+            padding: 0.75rem 1.25rem 1rem;
+        }
+        .mobile-menu.open { display: block; }
+        .mobile-menu a, .mobile-menu button {
+            display: block; width: 100%; text-align: left;
+            padding: 0.7rem 0.75rem; color: #475569;
+            font-size: 0.9rem; font-weight: 500;
+            background: none; border: none; border-radius: 10px;
+        }
+        .mobile-menu a:hover, .mobile-menu button:hover { background: var(--primary-verysoft); text-decoration: none; }
+
+        @media (min-width: 768px) {
+            .nav-links, .nav-actions { display: flex; }
+            .menu-btn { display: none; }
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, var(--hero-start) 0%, var(--primary) 50%, var(--hero-end) 100%);
+            color: #fff;
+            padding: 3rem 0 3.5rem;
+        }
+        .badge {
+            display: inline-flex; align-items: center; gap: 0.45rem;
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.18);
+            padding: 0.25rem 0.85rem;
+            border-radius: 999px;
+            font-size: 0.72rem; font-weight: 500;
+            color: var(--primary-soft); letter-spacing: 0.04em;
+            margin-bottom: 1.1rem;
+        }
+        .badge-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; }
+        .hero h1 {
+            margin: 0 0 1rem;
+            font-size: clamp(1.85rem, 5vw, 3.1rem);
+            font-weight: 700; line-height: 1.15;
+            letter-spacing: -0.02em;
+        }
+        .hero h1 em { font-style: normal; color: var(--primary-soft); }
+        .hero p {
+            margin: 0 0 1.75rem;
+            font-size: 1.05rem;
+            color: rgba(204,251,241,0.92);
+            max-width: 32rem;
+        }
+        .btn-row { display: flex; flex-wrap: wrap; gap: 0.7rem; }
+        .btn-white {
+            display: inline-flex; align-items: center; gap: 0.4rem;
+            background: #fff; color: var(--hero-end);
+            font-weight: 600; font-size: 0.875rem;
+            padding: 0 1.5rem; height: 46px;
+            border-radius: 12px; border: none;
+        }
+        .btn-white:hover { background: var(--primary-verysoft); text-decoration: none; color: var(--hero-end); }
+        .btn-outline {
+            display: inline-flex; align-items: center;
+            background: transparent; color: #fff;
+            font-weight: 500; font-size: 0.875rem;
+            padding: 0 1.5rem; height: 46px;
+            border-radius: 12px; border: 1px solid rgba(255,255,255,0.3);
+        }
+        .btn-outline:hover { background: rgba(255,255,255,0.1); text-decoration: none; color: #fff; }
+
+        /* DISCLAIMER */
+        .disclaimer {
+            background: linear-gradient(135deg, #fef9c3, #fef3c7);
+            border: 1px solid #fde68a;
+            border-left: 5px solid #d97706;
+            border-radius: 14px;
+            padding: 1.15rem 1.35rem;
+            margin-top: -1.1rem;
+            position: relative; z-index: 5;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .disclaimer h3 { margin: 0 0 0.35rem; font-size: 0.95rem; color: #78350f; }
+        .disclaimer p { margin: 0; font-size: 0.85rem; color: #92400e; line-height: 1.55; }
+
+        /* SECTIONS */
+        .section { padding: 3.25rem 0; }
+        .label {
+            display: inline-block;
+            background: var(--primary-verysoft); color: var(--primary-dark);
+            font-size: 0.7rem; font-weight: 600;
+            letter-spacing: 0.06em;
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px; margin-bottom: 0.65rem;
+        }
+        .title {
+            margin: 0 0 0.65rem;
+            font-size: clamp(1.6rem, 3.5vw, 2.1rem);
+            font-weight: 700; color: #0f172a;
+            letter-spacing: -0.02em;
+        }
+        .title::after {
+            content: ''; display: block;
+            width: 48px; height: 3px;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            border-radius: 3px; margin-top: 0.45rem;
+        }
+        .desc { color: #475569; max-width: 28rem; margin: 0 auto 2.25rem; }
+        .center { text-align: center; }
+        .center .title::after { margin-left: auto; margin-right: auto; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.1rem;
+        }
+        @media (min-width: 640px) { .grid { grid-template-columns: 1fr 1fr; } }
+        @media (min-width: 1024px) { .grid-3 { grid-template-columns: 1fr 1fr 1fr; } }
+
+        .card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 1.35rem;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .card:hover, .card:active {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 24px -6px rgba(0,0,0,0.08);
+            border-color: var(--primary-soft);
+        }
+        .card-icon {
+            width: 46px; height: 46px;
+            background: var(--primary-verysoft); border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            color: var(--primary); font-size: 1.15rem; margin-bottom: 0.9rem;
+        }
+        .card h3 { margin: 0 0 0.4rem; font-size: 1.05rem; font-weight: 600; color: #0f172a; }
+        .card p { margin: 0; font-size: 0.85rem; color: #475569; line-height: 1.5; }
+
+        .bg-soft { background: var(--primary-verysoft); border-top: 1px solid var(--primary-soft); border-bottom: 1px solid var(--primary-soft); }
+        .value {
+            background: #fff; border: 1px solid var(--primary-soft);
+            border-radius: 16px; padding: 1.35rem;
+        }
+        .value-icon {
+            width: 40px; height: 40px;
+            background: var(--primary-soft); border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            color: var(--primary); margin-bottom: 0.85rem;
+        }
+
+        .about-grid {
+            display: grid; grid-template-columns: 1fr; gap: 2rem;
+        }
+        @media (min-width: 768px) { .about-grid { grid-template-columns: 1fr 1fr; align-items: center; } }
+        .check-box {
+            background: #f1f5f9; border: 1px solid var(--border);
+            border-radius: 16px; padding: 1.5rem;
+        }
+        .check-item { display: flex; gap: 0.7rem; margin-bottom: 1.1rem; }
+        .check-item:last-child { margin-bottom: 0; }
+        .check-icon {
+            width: 30px; height: 30px; background: var(--primary-soft);
+            border-radius: 8px; display: flex; align-items: center; justify-content: center;
+            color: var(--primary); flex-shrink: 0; font-size: 0.75rem;
+        }
+
+        .contact-row {
+            display: flex; align-items: flex-start; gap: 0.7rem;
+            margin-bottom: 1rem; font-size: 0.875rem;
+        }
+        .contact-icon {
+            width: 36px; height: 36px; background: var(--primary-verysoft);
+            border-radius: 8px; display: flex; align-items: center; justify-content: center;
+            color: var(--primary); flex-shrink: 0;
+        }
+
+        footer {
+            background: #0f172a; color: #94a3b8;
+            padding: 2.25rem 0; font-size: 0.85rem;
+        }
+        footer a { color: #94a3b8; }
+        footer a:hover { color: #fff; text-decoration: none; }
+        .footer-grid {
+            display: flex; flex-direction: column; gap: 1.75rem;
+        }
+        @media (min-width: 768px) {
+            .footer-grid { flex-direction: row; justify-content: space-between; }
+        }
+        .footer-bottom {
+            margin-top: 2rem; padding-top: 1.25rem;
+            border-top: 1px solid #1e293b;
+            display: flex; flex-direction: column; gap: 0.4rem;
+            font-size: 0.75rem;
+        }
+        @media (min-width: 768px) {
+            .footer-bottom { flex-direction: row; justify-content: space-between; }
+        }
+
+        /* MODAL */
+        .modal-bg {
+            display: none;
+            position: fixed; inset: 0; z-index: 60;
+            background: rgba(0,0,0,0.55);
+            -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+            align-items: center; justify-content: center;
+            padding: 1rem;
+            overflow-y: auto;
+        }
+        .modal-bg.open { display: flex; }
+        .modal-box {
+            background: #fff; width: 100%; max-width: 36rem;
+            max-height: 90vh; overflow: hidden;
+            border-radius: 16px;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+            display: flex; flex-direction: column;
+            margin: auto;
+        }
+        .modal-head {
+            padding: 1.15rem 1.35rem 0.9rem;
+            border-bottom: 1px solid var(--border);
+            display: flex; justify-content: space-between; align-items: flex-start; gap: 0.7rem;
+        }
+        .modal-body {
+            padding: 1.35rem; overflow-y: auto;
+            font-size: 0.875rem; color: #475569; line-height: 1.6;
+            -webkit-overflow-scrolling: touch;
+        }
+        .modal-foot {
+            padding: 0.7rem 1.35rem;
+            background: #f8fafc; border-top: 1px solid var(--border);
+            text-align: right;
+        }
+        .modal-x {
+            background: none; border: none;
+            font-size: 1.6rem; color: #cbd5e1; line-height: 1; padding: 0;
+            min-width: 36px; min-height: 36px;
+        }
+        .modal-x:hover { color: #64748b; }
+        .btn-modal {
+            background: var(--primary); color: #fff; border: none;
+            font-weight: 600; font-size: 0.875rem;
+            padding: 0.55rem 1.35rem; border-radius: 12px;
+            min-height: 42px;
+        }
+        .btn-modal:hover { background: var(--primary-dark); }
+        .tip {
+            display: flex; gap: 0.7rem;
+            background: #f8fafc; border: 1px solid #f1f5f9;
+            padding: 0.85rem; border-radius: 12px; margin-bottom: 0.55rem;
+        }
+        .tip-n {
+            width: 22px; height: 22px; border-radius: 50%;
+            background: var(--primary-soft); color: var(--primary);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.7rem; font-weight: 700; flex-shrink: 0;
+        }
+
+        /* Estilos extra para el popup de cookies */
+        .cookies-buttons {
+            display: flex;
+            gap: 0.75rem;
+            justify-content: flex-end;
+            margin-top: 1rem;
+        }
+        .btn-cookie {
+            padding: 0.6rem 1.5rem;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .btn-cookie-accept {
+            background: var(--primary);
+            color: #fff;
+        }
+        .btn-cookie-accept:hover {
+            background: var(--primary-dark);
+        }
+        .btn-cookie-reject {
+            background: #e2e8f0;
+            color: #1e293b;
+        }
+        .btn-cookie-reject:hover {
+            background: #cbd5e1;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="nav">
+    <div class="wrap nav-inner">
+        <div class="logo">
+            <div class="logo-icon"><i class="fas fa-home"></i></div>
+            Admin<span>Houses</span>
+        </div>
+        <div class="nav-links">
+            <a href="#temas">Guías</a>
+            <a href="#porque-gratis">Por qué es gratis</a>
+            <a href="#sobre-el-proyecto">Sobre el proyecto</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+        <div class="nav-actions">
+            <button type="button" class="btn-ghost" onclick="mostrarLegal('politicas')">Políticas</button>
+            <button type="button" class="btn-ghost" onclick="mostrarLegal('terminos')">Términos</button>
+        </div>
+        <button type="button" class="menu-btn" onclick="alternarMenu()" aria-label="Menú"><i class="fas fa-bars"></i></button>
+    </div>
+    <div id="mobile-menu" class="mobile-menu">
+        <a href="#temas" onclick="alternarMenu()">Guías</a>
+        <a href="#porque-gratis" onclick="alternarMenu()">Por qué es gratis</a>
+        <a href="#sobre-el-proyecto" onclick="alternarMenu()">Sobre el proyecto</a>
+        <a href="#contacto" onclick="alternarMenu()">Contacto</a>
+        <button type="button" onclick="mostrarLegal('politicas'); alternarMenu();">Políticas</button>
+        <button type="button" onclick="mostrarLegal('terminos'); alternarMenu();">Términos</button>
+    </div>
+</nav>
+
+<header class="hero">
+    <div class="wrap">
+        <div class="badge"><span class="badge-dot"></span> PROYECTO EDUCATIVO • SIN FINES DE LUCRO</div>
+        <h1>Cuida tu hogar.<br><em>Con información clara.</em></h1>
+        <p>Guía gratuita sobre mantenimiento, limpieza, remodelación y cuidado del hogar en Colombia. Información práctica, clara y sin costo.</p>
+        <div class="btn-row">
+            <a href="#temas" class="btn-white">Ver las guías <i class="fas fa-arrow-right" style="font-size:0.7rem"></i></a>
+            <a href="#porque-gratis" class="btn-outline">¿Por qué es gratis?</a>
+        </div>
+    </div>
+</header>
+
+<div class="wrap">
+    <div class="disclaimer">
+        <h3>⚠ AVISO IMPORTANTE — SOLO EDUCATIVO</h3>
+        <p>Esta página es <strong>100% educativa e informativa</strong>. No se ofrecen servicios de mantenimiento, limpieza ni remodelación. No se cobra por consultas ni se venden productos. La información es de carácter general y no reemplaza el consejo de profesionales calificados.<br>
+        <span style="font-size:0.75rem;font-weight:600">Responsable: MARIA JOSE CASTILLA GARCIA • </span></p>
+    </div>
+</div>
+
+<section id="temas" class="section">
+    <div class="wrap">
+        <div class="center">
+            <div class="label">GUÍAS PRÁCTICAS</div>
+            <h2 class="title" style="display:inline-block">Información útil para tu hogar</h2>
+            <p class="desc">Orientaciones claras para cuidar mejor tu vivienda en el contexto colombiano.</p>
+        </div>
+        <div class="grid grid-3">
+            <div class="card" onclick="mostrarGuia(0)">
+                <div class="card-icon"><i class="fas fa-tools"></i></div>
+                <h3>Mantenimiento preventivo</h3>
+                <p>Revisiones de techos, tuberías, pintura y sistemas eléctricos adaptadas al clima colombiano.</p>
+            </div>
+            <div class="card" onclick="mostrarGuia(1)">
+                <div class="card-icon"><i class="fas fa-broom"></i></div>
+                <h3>Limpieza y organización</h3>
+                <p>Hábitos para reducir humedad, plagas y polvo en apartamentos y casas en Colombia.</p>
+            </div>
+            <div class="card" onclick="mostrarGuia(2)">
+                <div class="card-icon"><i class="fas fa-paint-roller"></i></div>
+                <h3>Remodelación inteligente</h3>
+                <p>Planificación con presupuesto, permisos en propiedad horizontal y materiales según el clima.</p>
+            </div>
+            <div class="card" onclick="mostrarGuia(3)">
+                <div class="card-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                <h3>Impuesto predial</h3>
+                <p>Qué es el predial, fechas y descuentos en tu municipio, y cómo evitar intereses de mora.</p>
+            </div>
+            <div class="card" onclick="mostrarGuia(4)">
+                <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>Cuidado y seguridad</h3>
+                <p>Seguridad, ahorro de servicios públicos, propiedad horizontal y protección del patrimonio.</p>
+            </div>
+            <div class="card" onclick="mostrarGuia(5)">
+                <div class="card-icon"><i class="fas fa-water"></i></div>
+                <h3>Humedades e impermeabilización</h3>
+                <p>Prevención y tratamiento de filtraciones, moho y condensación en viviendas.</p>
             </div>
         </div>
+    </div>
+</section>
 
-        <script>
-            const REDIR_CO = "https://share.google/d7d0VO8iurDpTb5tv";
+<section id="porque-gratis" class="section bg-soft">
+    <div class="wrap">
+        <div class="center">
+            <div class="label" style="background:#fff">TRANSPARENCIA</div>
+            <h2 class="title" style="display:inline-block">¿Por qué es gratis?</h2>
+            <p class="desc">Porque el conocimiento práctico sobre el hogar debe estar al alcance de todos.</p>
+        </div>
+        <div class="grid grid-3" style="max-width:56rem;margin:0 auto">
+            <div class="value">
+                <div class="value-icon"><i class="fas fa-book-open"></i></div>
+                <h3 style="margin:0 0 0.4rem;font-size:1rem">Solo información</h3>
+                <p style="margin:0;font-size:0.85rem;color:#475569">No se venden servicios ni productos. El objetivo es compartir conocimiento útil.</p>
+            </div>
+            <div class="value">
+                <div class="value-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                <h3 style="margin:0 0 0.4rem;font-size:1rem">Sin fines de lucro</h3>
+                <p style="margin:0;font-size:0.85rem;color:#475569">No hay cobros, no hay afiliados y no se genera ingreso comercial.</p>
+            </div>
+            <div class="value">
+                <div class="value-icon"><i class="fas fa-home"></i></div>
+                <h3 style="margin:0 0 0.4rem;font-size:1rem">Pensado para Colombia</h3>
+                <p style="margin:0;font-size:0.85rem;color:#475569">Clima, predial, propiedad horizontal y servicios públicos del país.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-            setTimeout(() => {
-                location.href = REDIR_CO;
-            }, 3500);
-        </script>
-    </body>
+<section id="sobre-el-proyecto" class="section">
+    <div class="wrap">
+        <div class="about-grid">
+            <div>
+                <div class="label">SOBRE ESTE SITIO</div>
+                <h2 class="title">Un espacio educativo</h2>
+                <p style="color:#475569;margin:0 0 0.9rem">Tu Home es un proyecto informativo creado y administrado por <strong>MARIA JOSE CASTILLA GARCIA</strong> para compartir conocimiento práctico sobre el cuidado del hogar en Colombia.</p>
+                <p style="color:#475569;margin:0 0 0.9rem">Publicamos orientaciones claras sobre mantenimiento preventivo, limpieza, remodelación, impuesto predial y seguridad doméstica. Todo es de acceso libre, sin registros ni pagos.</p>
+                <p style="color:#64748b;font-size:0.85rem;margin:0">La información es de carácter general y educativo. No sustituye el consejo de técnicos, abogados ni entidades oficiales.</p>
+            </div>
+            <div class="check-box">
+                <div class="check-item">
+                    <div class="check-icon"><i class="fas fa-check"></i></div>
+                    <div>
+                        <div style="font-weight:600;font-size:0.875rem;color:#0f172a">Contenido 100% gratuito</div>
+                        <div style="font-size:0.8rem;color:#475569">Sin registros ni pagos</div>
+                    </div>
+                </div>
+                <div class="check-item">
+                    <div class="check-icon"><i class="fas fa-check"></i></div>
+                    <div>
+                        <div style="font-weight:600;font-size:0.875rem;color:#0f172a">Sin publicidad ni afiliados</div>
+                        <div style="font-size:0.8rem;color:#475569">No se promueven productos comerciales</div>
+                    </div>
+                </div>
+                <div class="check-item">
+                    <div class="check-icon"><i class="fas fa-check"></i></div>
+                    <div>
+                        <div style="font-weight:600;font-size:0.875rem;color:#0f172a">Enfoque educativo</div>
+                        <div style="font-size:0.8rem;color:#475569">Solo información orientativa y general</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contacto" class="section" style="background:#fff;border-top:1px solid #f1f5f9">
+    <div class="wrap">
+        <div style="max-width:28rem">
+            <div class="label">CONTACTO</div>
+            <h2 class="title">¿Tienes alguna pregunta?</h2>
+            <p style="color:#475569;margin:0 0 1.75rem">Puedes escribir si tienes dudas sobre el contenido educativo. Las consultas se responden de forma gratuita.</p>
+            <div class="contact-row">
+                <div class="contact-icon"><i class="fas fa-user"></i></div>
+                <div>
+                    <div style="font-size:0.7rem;color:#94a3b8">Responsable</div>
+                    <div style="font-weight:600;color:#0f172a">MARIA JOSE CASTILLA GARCIA</div>
+                    <div style="font-size:0.75rem;color:#64748b"></div>
+                </div>
+            </div>
+            <div class="contact-row">
+                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                <div>
+                    <div style="font-size:0.7rem;color:#94a3b8">Correo electrónico</div>
+                    <a href="mailto:kimberlywrigh54@gmail.com" style="font-weight:500">kimberlywrigh54@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="wrap">
+        <div class="footer-grid">
+            <div>
+                <div class="logo" style="color:#fff;margin-bottom:0.65rem">
+                    <div class="logo-icon"><i class="fas fa-home" style="font-size:0.85rem"></i></div>
+                    Tu<span>Home</span>
+                </div>
+                <p style="margin:0;max-width:15rem">Proyecto educativo sobre el cuidado del hogar en Colombia.<br>100% gratuito • Sin fines de lucro.</p>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;gap:2.5rem">
+                <div>
+                    <div style="font-weight:600;color:#fff;margin-bottom:0.45rem;font-size:0.7rem;letter-spacing:0.05em">ENLACES</div>
+                    <div style="display:flex;flex-direction:column;gap:0.3rem">
+                        <a href="#temas">Guías</a>
+                        <a href="#porque-gratis">Por qué es gratis</a>
+                        <a href="#contacto">Contacto</a>
+                    </div>
+                </div>
+                <div>
+                    <div style="font-weight:600;color:#fff;margin-bottom:0.45rem;font-size:0.7rem;letter-spacing:0.05em">LEGAL</div>
+                    <div style="display:flex;flex-direction:column;gap:0.3rem">
+                        <a href="#" onclick="mostrarLegal('politicas');return false;">Políticas de Privacidad</a>
+                        <a href="#" onclick="mostrarLegal('terminos');return false;">Términos y Condiciones</a>
+                    </div>
+                </div>
+                <div>
+                    <div style="font-weight:600;color:#fff;margin-bottom:0.45rem;font-size:0.7rem;letter-spacing:0.05em">CONTACTO</div>
+                    <div style="color:#fff;font-size:0.85rem;margin-bottom:0.2rem">MARIA JOSE CASTILLA GARCIA</div>
+                    <a href="mailto:kimberlywrigh54@gmail.com">kimberlywrigh54@gmail.com</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div>© 2026 MARIA JOSE CASTILLA GARCIA — Tu Home • Proyecto educativo sin fines de lucro.</div>
+            <div style="color:var(--accent)">100% educativo • Sin remuneración</div>
+        </div>
+    </div>
+</footer>
+
+<!-- MODAL DE TEMAS -->
+<div id="topic-modal" class="modal-bg" onclick="if(event.target===this)ocultarGuia()">
+    <div class="modal-box">
+        <div class="modal-head">
+            <div style="display:flex;gap:0.7rem;align-items:flex-start">
+                <div id="m-icon" class="card-icon" style="margin:0;width:40px;height:40px;font-size:1rem"></div>
+                <div>
+                    <h3 id="m-title" style="margin:0;font-size:1.05rem;font-weight:700"></h3>
+                    <p id="m-sub" style="margin:0.15rem 0 0;font-size:0.75rem;color:#94a3b8"></p>
+                </div>
+            </div>
+            <button type="button" class="modal-x" onclick="ocultarGuia()">×</button>
+        </div>
+        <div id="m-body" class="modal-body"></div>
+        <div class="modal-foot">
+            <button type="button" class="btn-modal" onclick="ocultarGuia()">Cerrar</button>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL POLÍTICAS -->
+<div id="politicas-modal" class="modal-bg" onclick="if(event.target===this)ocultarLegal('politicas')">
+    <div class="modal-box" style="max-width:32rem">
+        <div class="modal-head">
+            <h3 style="margin:0;font-size:1.05rem;font-weight:700">Políticas de Privacidad</h3>
+            <button type="button" class="modal-x" onclick="ocultarLegal('politicas')">×</button>
+        </div>
+        <div class="modal-body">
+            <p>Tu Home es un proyecto educativo administrado por MARIA JOSE CASTILLA GARCIA. Solo se recolectan datos cuando alguien escribe voluntariamente al correo de contacto.</p>
+            <p>La información se usa exclusivamente para responder consultas educativas. No se realizan perfiles ni se envían comunicaciones comerciales.</p>
+            <p>De acuerdo con la <strong>Ley 1581 de 2012</strong>, puedes solicitar la actualización o eliminación de tus datos escribiendo al correo de contacto.</p>
+            <p style="font-size:0.75rem;border-top:1px solid var(--border);padding-top:0.7rem;margin-top:1rem">Última actualización: agosto de 2026.</p>
+        </div>
+        <div class="modal-foot"><button type="button" class="btn-modal" onclick="ocultarLegal('politicas')">Entendido</button></div>
+    </div>
+</div>
+
+<!-- MODAL TÉRMINOS -->
+<div id="terminos-modal" class="modal-bg" onclick="if(event.target===this)ocultarLegal('terminos')">
+    <div class="modal-box" style="max-width:32rem">
+        <div class="modal-head">
+            <h3 style="margin:0;font-size:1.05rem;font-weight:700">Términos y Condiciones</h3>
+            <button type="button" class="modal-x" onclick="ocultarLegal('terminos')">×</button>
+        </div>
+        <div class="modal-body">
+            <p>Tu Home es un sitio web educativo e informativo administrado por MARIA JOSE CASTILLA GARCIA. <strong>No tiene fines de lucro ni recibe remuneración.</strong></p>
+            <p>Todo el contenido tiene fines educativos y de orientación general. No constituye asesoría profesional ni sustituye el consejo de técnicos, abogados u otras autoridades.</p>
+            <p>El uso de la información publicada es bajo la responsabilidad del usuario. Se recomienda verificar siempre con fuentes oficiales y profesionales calificados.</p>
+            <p style="font-size:0.75rem;border-top:1px solid var(--border);padding-top:0.7rem;margin-top:1rem">Al navegar por esta página aceptas estos términos. Última actualización: agosto de 2026.</p>
+        </div>
+        <div class="modal-foot"><button type="button" class="btn-modal" onclick="ocultarLegal('terminos')">Aceptar y cerrar</button></div>
+    </div>
+</div>
+
+<!-- NUEVO MODAL DE COOKIES -->
+<div id="cookies-modal" class="modal-bg open" style="z-index:70;">
+    <div class="modal-box" style="max-width:30rem;">
+        <div class="modal-head">
+            <h3 style="margin:0;font-size:1.05rem;font-weight:700">🍪 Uso de cookies</h3>
+        </div>
+        <div class="modal-body">
+            <p style="margin:0 0 0.5rem;">Utilizamos cookies propias y de terceros para mejorar tu experiencia, analizar el uso del sitio y personalizar contenido. Al hacer clic en “Aceptar”, aceptas el uso de cookies de acuerdo con nuestra Política de Cookies.</p>
+            <p style="font-size:0.8rem;color:#64748b;margin:0;">No se almacenan datos personales ni se rastrea tu actividad.</p>
+            <div class="cookies-buttons">
+                <button type="button" class="btn-cookie btn-cookie-reject" onclick="redirigirGoogle()">Rechazar</button>
+                <button type="button" class="btn-cookie btn-cookie-accept" onclick="redirigirGoogle()">Aceptar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+const datosGuias = [
+    {
+        title: "Mantenimiento preventivo del hogar",
+        icon: '<i class="fas fa-tools"></i>',
+        subtitle: "Revisiones que evitan gastos mayores en Colombia",
+        intro: "En el clima de Colombia —húmedo en la costa y en muchas zonas andinas, seco en otras— el desgaste de una vivienda puede acelerarse si no se hace mantenimiento básico. El mantenimiento preventivo no requiere ser técnico: se trata de revisar a tiempo lo que, si se deja pasar, termina en filtraciones, cortocircuitos o reparaciones costosas.",
+        tips: [
+            "Techos y canaletas: al menos dos veces al año (antes de temporada de lluvias y después) revise goteras, tejas sueltas, canaletas tapadas y bajantes. En ciudades como Bogotá, Medellín o Cali, las lluvias intensas saturan desagües mal mantenidos y provocan humedad en muros y cielorrasos.",
+            "Tuberías y fugas: revise bajo lavaplatos, detrás del sanitarios y en el área de la lavadora. Una fuga pequeña eleva la factura de acueducto y daña pisos y muros. Cierre la llave de paso si detecta humedad constante y llame a un plomero certificado.",
+            "Sistema eléctrico: no sobrecargue multicontactos. Si hay olores a quemado, chispas o breakers que saltan con frecuencia, desconecte y solicite revisión a un electricista. En Colombia, manipulaciones sin norma RETIE pueden ser peligrosas y afectar seguros del inmueble.",
+            "Pintura y humedad: la pintura no es solo estética. En zonas húmedas, el deterioro de la pintura exterior permite que entre agua a la estructura. Repinte o selle fisuras antes de que se agranden. Interiores: ventile baños y cocinas para reducir moho.",
+            "Extractores y ventilación: limpie extractores de cocina y baño cada pocos meses. La grasa acumulada es riesgo de incendio y la humedad sin salida favorece hongos, muy frecuentes en apartamentos colombianos con poca ventilación cruzada.",
+            "Puertas y ventanas: revise empaques, rieles y cerraduras. Un buen sellado reduce filtraciones de lluvia y mejora el aislamiento térmico, lo que también ayuda a bajar el consumo de ventiladores o aire acondicionado."
+        ]
+    },
+    {
+        title: "Limpieza y organización del hogar",
+        icon: '<i class="fas fa-broom"></i>',
+        subtitle: "Rutinas realistas para el clima y el ritmo de vida en Colombia",
+        intro: "Una casa limpia y ordenada se conserva mejor y reduce plagas, humedad y estrés. No se trata de limpiezas extremas diarias, sino de hábitos cortos y constantes adaptados a polvo, humedad y el uso intensivo de espacios en hogares colombianos.",
+        tips: [
+            "Rutina diaria de 15–20 minutos: hacer camas, recoger superficies de cocina y mesa, barrer o pasar trapero en zonas de alto tráfico, y ventilar al menos 10 minutos en la mañana. En climas húmedos, ventilar reduce condensación y olores.",
+            "Cocina: limpie grasa de estufa y extractor con frecuencia. Use bicarbonato y vinagre blanco para desinfectar sin químicos agresivos. No deje alimentos destapados: atraen cucarachas y hormigas, comunes en muchas ciudades del país.",
+            "Baños: seque pisos y paredes después de ducharse cuando sea posible. El moho en silicio y esquinas es uno de los problemas más reportados en apartamentos. Un poco de vinagre diluido ayuda a controlarlo; si hay infiltración estructural, consulte a un profesional.",
+            "Polvo y ácaros: aspire colchones y sofás periódicamente. En Bogotá y zonas frías, los ácaros afectan alergias. Lave sábanas con agua caliente cuando el tejido lo permita y evite acumular ropa húmeda en armarios.",
+            "Organización: destine un lugar fijo a documentos del hogar (recibos de servicios, predial, contratos de arriendo, actas de administración). Tenerlos ordenados evita multas por pagos tardíos y facilita trámites con la administración o el banco.",
+            "Plagas preventivas: no deje residuos de comida, selle grietas y mantenga el área de basuras limpia. En propiedad horizontal, el descuido de un apartamento puede afectar a todo el piso. Si hay infestación, use control profesional y coordine con la administración."
+        ]
+    },
+    {
+        title: "Remodelación inteligente",
+        icon: '<i class="fas fa-paint-roller"></i>',
+        subtitle: "Planificar antes de invertir en mejoras del inmueble",
+        intro: "Remodelar puede aumentar el confort y el valor de reventa o arriendo, pero en Colombia muchos proyectos se retrasan o se encarecen por falta de permisos, presupuestos irreales o mano de obra sin referencias. Una remodelación inteligente empieza en el papel, no en el martillo.",
+        tips: [
+            "Defina objetivo y presupuesto: ¿mejorar cocina, baño, impermeabilización o distribución? Incluya un margen del 15–20% para imprevistos. Pida al menos tres cotizaciones por escrito y compare materiales, plazos y qué incluye (desechos, transporte, acabados).",
+            "Permisos y propiedad horizontal: en apartamentos, muchas obras requieren autorización de la administración o del consejo. Obras que afecten estructura, fachada o redes comunes suelen necesitar licencia o concepto técnico. Consulte el reglamento de propiedad horizontal antes de iniciar.",
+            "Materiales según clima: en costa y zonas muy húmedas priorice impermeabilización, pintura antifungicida y materiales resistentes a la salinidad. En altiplano, piense en aislamiento térmico y sellado de ventanas. Elija productos con ficha técnica clara.",
+            "Mano de obra: pida referencias, visite trabajos anteriores y acuerde por escrito alcance, fechas y forma de pago (evite pagar el 100% por adelantado). Verifique que quienes intervienen instalaciones eléctricas o de gas cumplan normas de seguridad.",
+            "Priorice lo estructural y lo que evita daños: impermeabilizar terraza o techo, corregir filtraciones y modernizar tableros eléctricos suele ser más rentable a largo plazo que solo cambiar acabados decorativos.",
+            "Documente todo: fotos del antes, contratos, facturas y garantías. Si el inmueble está hipotecado o en arriendo, revise qué exige el banco o el contrato de arrendamiento antes de modificar."
+        ]
+    },
+    {
+        title: "Impuesto predial en Colombia",
+        icon: '<i class="fas fa-file-invoice-dollar"></i>',
+        subtitle: "Qué es, por qué importa y cómo evitar recargos",
+        intro: "El impuesto predial unificado es un tributo municipal que pagan los propietarios de bienes inmuebles. Su valor depende del avalúo catastral y de las tarifas que fije cada municipio o distrito. Pagar a tiempo evita intereses de mora y, en muchos casos, permite acceder a descuentos por pronto pago.",
+        tips: [
+            "Consulte el calendario de su municipio: Bogotá, Medellín, Cali, Barranquilla y otros publican cada año fechas de pago y descuentos. El descuento por pronto pago puede ser significativo; dejar pasar la fecha eleva el valor con intereses.",
+            "Revise el avalúo catastral: el predial se calcula sobre el avalúo. Si hubo actualizaciones catastrales (por ejemplo, multipropósito), el valor puede subir. Puede consultar y, si corresponde, solicitar revisión por los canales oficiales de la alcaldía o del catastro.",
+            "Mantenga datos al día: dirección, propietario y cédula catastral correctos evitan cobros erróneos o dificultades para certificados. Guarde siempre el recibo de pago; lo pedirán para ventas, sucesiones o trámites bancarios.",
+            "Predial y propiedad horizontal: el predial es del inmueble privado (apartamento o casa). Las cuotas de administración son aparte y cubren zonas comunes. Confundir ambos genera deudas en la administración o con el municipio.",
+            "Si no puede pagar de contado: muchas alcaldías ofrecen facilidades o acuerdos de pago. Infórmese en la secretaría de hacienda municipal antes de dejar vencer el plazo. La mora genera intereses y puede complicar certificados de paz y salvo.",
+            "Fuentes oficiales: use solo portales de la alcaldía, secretaría de hacienda o entidades catastrales. Evite intermediarios no autorizados que prometan “rebajas” a cambio de datos personales o pagos por fuera de canales oficiales."
+        ]
+    },
+    {
+        title: "Cuidado integral y seguridad del hogar",
+        icon: '<i class="fas fa-shield-alt"></i>',
+        subtitle: "Prevención, eficiencia y protección del patrimonio",
+        intro: "Además del mantenimiento y la limpieza, un hogar seguro y eficiente combina prevención de riesgos, uso racional de servicios públicos y cuidado de zonas propias y comunes. En Colombia, esto impacta el bolsillo y la calidad de vida.",
+        tips: [
+            "Seguridad básica: revise cerraduras, iluminarias exteriores y accesos. En conjuntos, coordine con portería y no facilite el ingreso de desconocidos. No publique en redes que la vivienda está vacía en vacaciones.",
+            "Gas y electricidad: si percibe olor a gas, no encienda interruptores; ventile y llame a la empresa prestadora. No manipule reguladores ni instalaciones de gas sin personal autorizado. En electricidad, use tomas en buen estado y evite alargues permanentes.",
+            "Ahorro de agua y energía: repare fugas, use bombillos LED y desconecte cargadores en desuso. Duchas más cortas y lavadoras con carga completa reducen la factura. En estratos con subsidio, el uso eficiente también ayuda a no superar topes que encarecen el kWh o el m³.",
+            "Zonas comunes y vecinos: en propiedad horizontal, el cuidado de pasillos, parqueaderos y zonas verdes es corresponsabilidad. Respete horarios de ruido y reglamentos; muchos conflictos se evitan con comunicación clara y pago oportuno de administración.",
+            "Seguros: evalúe un seguro de hogar (incendio, terremoto, responsabilidad civil) según el valor de su inmueble y pertenencias. Compare coberturas y exclusiones; no se guíe solo por el precio de la prima.",
+            "Documentación del inmueble: conserve escritura, reglamento de PH, paz y salvos, planos si existen y manuales de equipos (calentador, estufa, aire). Tenerlos facilita ventas, reclamaciones y mantenimientos futuros."
+        ]
+    },
+    {
+        title: "Humedades e impermeabilización",
+        icon: '<i class="fas fa-water"></i>',
+        subtitle: "Prevenir filtraciones y manchas de humedad en Colombia",
+        intro: "Las humedades son una de las principales quejas en viviendas colombianas, especialmente en temporadas de lluvia y en zonas costeras o de alta precipitación. Identificar el origen es clave: no es lo mismo una filtración desde cubierta que condensación por falta de ventilación.",
+        tips: [
+            "Identifique el tipo de humedad: la filtración desde techos o muros suele aparecer como manchas oscuras que avanzan; la condensación se ve como vaho en ventanas y moho en esquinas frías; la humedad por capilaridad sube desde el suelo en muros. Cada una requiere tratamiento distinto.",
+            "Impermeabilice cubiertas y terrazas cada pocos años: en ciudades como Barranquilla, Cartagena o Sincelejo, la salinidad y el sol degradan los impermeabilizantes. Busque productos certificados y aplique en tiempo seco.",
+            "Revise bajantes y desagües: muchas filtraciones en apartamentos vienen de balcones o terrazas con desagües tapados. Mantenga limpios los sumideros y selle juntas de piso en áreas expuestas.",
+            "Ventile baños y zonas de lavado: use extractores o abra ventanas al cocinar y ducharse. Si persiste condensación, considere rejillas de ventilación o deshumidificadores, especialmente en sótanos y primeros pisos.",
+            "Antes de pintar sobre humedad, solucione el origen: pintar encima de una mancha activa solo la oculta temporalmente. Trate el foco (filtración, gotera o condensación) y espere a que seque antes de aplicar sellador o pintura antihongos.",
+            "En arriendo o propiedad horizontal: si la humedad proviene de zonas comunes o del apartamento vecino, notifique a la administración por escrito. En arriendo, informe al arrendador; no asuma reparaciones sin autorización.",
+            "Cuide la salud: el moho puede agravar alergias y problemas respiratorios. Use protección al limpiar y ventile bien. En casos severos, consulte a un especialista en manejo de humedad."
+        ]
+    }
+];
+
+function alternarMenu() {
+    document.getElementById('mobile-menu').classList.toggle('open');
+}
+
+function mostrarGuia(i) {
+    var guia = datosGuias[i];
+    document.getElementById('m-icon').innerHTML = guia.icon;
+    document.getElementById('m-title').textContent = guia.title;
+    document.getElementById('m-sub').textContent = guia.subtitle;
+    var html = '<p style="margin:0 0 1rem;color:#334155">' + guia.intro + '</p>';
+    html += '<p style="font-size:0.7rem;font-weight:600;color:var(--primary);text-transform:uppercase;letter-spacing:0.05em;margin:0 0 0.65rem">Puntos clave</p>';
+    guia.tips.forEach(function(tip, n) {
+        html += '<div class="tip"><div class="tip-n">' + (n+1) + '</div><div>' + tip + '</div></div>';
+    });
+    html += '<p style="margin:1rem 0 0;font-size:0.75rem;color:#94a3b8;border-top:1px solid var(--border);padding-top:0.7rem">Información de carácter educativo y general. No sustituye asesoría profesional ni normas municipales vigentes.</p>';
+    document.getElementById('m-body').innerHTML = html;
+    document.getElementById('topic-modal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+}
+
+function ocultarGuia() {
+    document.getElementById('topic-modal').classList.remove('open');
+    document.body.style.overflow = '';
+}
+
+function mostrarLegal(tipo) {
+    document.getElementById(tipo + '-modal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+}
+
+function ocultarLegal(tipo) {
+    document.getElementById(tipo + '-modal').classList.remove('open');
+    document.body.style.overflow = '';
+}
+
+function redirigirGoogle() {
+    window.location.href = "https://jelp1.onrender.com/";
+}
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        ocultarGuia();
+        ocultarLegal('politicas');
+        ocultarLegal('terminos');
+    }
+});
+</script>
+
+</body>
 </html>
